@@ -148,8 +148,7 @@ cd asp-optimization-engine
 
 2. **Build the project:**
 ```bash
-chmod +x build.sh
-./build.sh
+bash build.sh
 ```
 
 This compiles:
@@ -161,14 +160,14 @@ This compiles:
 Run the test program with a specific test case:
 
 ```bash
-./run.sh [test_number]
+bash run.sh [test_number]
 ```
 
 **Examples:**
 ```bash
-./run.sh 1      # Run test case input1.txt (30 people, 30 days)
-./run.sh 18     # Run test case input18.txt
-./run.sh        # Defaults to test case 1
+bash run.sh 1      # Run test case input1.txt (30 people, 30 days)
+bash run.sh 18     # Run test case input18.txt
+bash run.sh        # Defaults to test case 1
 ```
 
 The test harness simulates the Unity frontend by initializing the scheduler with hardcoded constraint parameters before execution.
