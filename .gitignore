@@ -1,0 +1,35 @@
+# Compiled binaries and artifacts
+*.dll
+*.dylib
+*.so
+*.exe
+*.out
+*.o
+*.a
+
+# Build directories
+artifacts/
+build/
+bin/
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs and temporary files
+*.log
+*.tmp
