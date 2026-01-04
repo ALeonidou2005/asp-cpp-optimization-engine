@@ -142,7 +142,7 @@ ASP-Optimization-Engine/
 
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/yourusername/asp-optimization-engine.git
+git clone https://github.com/ALeonidou2005/asp-optimization-engine.git
 cd asp-optimization-engine
 ```
 
