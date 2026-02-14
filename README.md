@@ -6,12 +6,12 @@ A C++ optimization engine that generates optimal duty schedules for military per
 
 ## Overview
 
-This project solves the complex problem of scheduling military duty assignments across multiple days while satisfying **23 different constraints** related to availability, preferences, fairness, and operational requirements. The algorithm efficiently finds high-quality schedules that balance hard requirements with soft optimization goals.
+This project solves the complex problem of scheduling military duty assignments across multiple days while satisfying and optimizing for **1500+ constraints** related to availability, preferences, fairness, and operational requirements. The algorithm efficiently finds high-quality schedules that balance hard requirements with soft optimization goals.
 
 **Key Features:**
 - Handles 30+ personnel across a month-long scheduling period
-- Enforces 15 fixed (mandatory) constraints
-- Optimizes 8 additional constraints using simulated annealing
+- Enforces 15 fixed (mandatory) constraint types
+- Optimizes 8 additional constraint types using simulated annealing
 - Two-phase approach: validity search → quality optimization
 - Weighted penalty system for comparing solution quality
 - Cross-platform support (macOS, Linux, Windows)
@@ -33,7 +33,7 @@ This optimization engine serves as the backend for a Unity desktop application w
 **Phase 2: Optimization (Simulated Annealing)**
 - Starts from a valid schedule found in Phase 1
 - Iteratively explores neighboring valid schedules
-- Optimizes the 8 soft constraints using weighted penalties
+- Optimizes the 8 soft constraints types using weighted penalties
 - Uses geometric cooling schedule with configurable parameters
 - Maximum neighbor-finding attempts: 2,000,000 (configurable)
 
@@ -69,7 +69,7 @@ where:
 2. **Low Temperature (Exploitation):** Becomes increasingly selective, refining the current solution toward a local optimum
 
 **Neighbor Generation:**
-The algorithm uses optimized brute-force to generate neighboring schedules by making small changes (e.g., swapping duty assignments) while maintaining validity of all 15 fixed constraints. This ensures every explored solution is still valid (in the valid solution space).
+The algorithm uses optimized brute-force to generate neighboring schedules by making small changes (e.g., swapping duty assignments) while maintaining validity of all 15 fixed constraint types. This ensures every explored solution is still valid (in the valid solution space).
 
 **Convergence:**
 The algorithm terminates when:
@@ -80,7 +80,7 @@ The algorithm terminates when:
 
 The scheduler handles 1500+ constraints across 23 constraint types, divided into two main categories:
 
-### Fixed Constraints (15) - Must Be Satisfied
+### Fixed Constraint Types (15) - Must Be Satisfied
 
 These are hard requirements that every valid schedule must meet:
 
@@ -100,7 +100,7 @@ These are hard requirements that every valid schedule must meet:
 14. **Max Sunday duties**: Monthly limit per person
 15. **Min people per company**: Aim for a minimum staffing from each company (subunit) every day
 
-### Optimized Constraints (8) - Soft Goals
+### Optimized Constraint Types (8) - Soft Goals
 
 These are optimized using simulated annealing with weighted penalties:
 
