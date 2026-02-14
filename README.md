@@ -78,7 +78,7 @@ The algorithm terminates when:
 
 ## Constraints System
 
-The scheduler handles **23 total constraints** divided into two categories:
+The scheduler handles 1500+ constraints across 23 constraint types, divided into two main categories:
 
 ### Fixed Constraints (15) - Must Be Satisfied
 
